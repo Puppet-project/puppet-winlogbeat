@@ -53,7 +53,7 @@ class winlogbeat (
   $metrics              = undef,
   #### End v5 only ####
   $event_logs           = {},
-  $event_logs_merge     = false,
+  $event_logs_merge     = true,
   $proxy_address        = undef,
 ) inherits winlogbeat::params {
   validate_bool($event_logs_merge)
