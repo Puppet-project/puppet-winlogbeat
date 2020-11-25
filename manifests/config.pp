@@ -32,7 +32,7 @@ class winlogbeat::config {
         ensure       => file,
         path         => $winlogbeat::config_file,
         content      => template($winlogbeat::real_conf_template),
-        validate_cmd => "\"${winlogbeat_path}\" ${validate_cmd} -c \"%\"",
+        #validate_cmd => "\"${winlogbeat_path}\" ${validate_cmd} -c \"%\"",
         notify       => Service['winlogbeat'],
       }
     } # end Windows
