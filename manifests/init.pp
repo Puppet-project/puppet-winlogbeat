@@ -52,7 +52,9 @@ class winlogbeat (
   $fields_under_root    = $winlogbeat::params::fields_under_root,
   $metrics              = undef,
   #### End v5 only ####
-  $event_logs           = {'test123' => 'security'},
+  $event_logs           = {'Security' => {
+                            'tags' => ['secure']}
+                          },
   $event_logs_merge     = true,
   $proxy_address        = undef,
 ) inherits winlogbeat::params {
